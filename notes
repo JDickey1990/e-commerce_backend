@@ -1,0 +1,34 @@
+USER
+has_many :orders
+
+:email-string
+:username-string
+
+ORDER
+belongs_to :User
+has_many :productorders
+has_many products through productorders
+
+ :subtotal-float, 
+ :tax-float, 
+ :total-float,
+ :date-datetime
+
+PRODUCT
+has_many :productorders
+has_many orders through productorders
+
+ :id-integer
+ :model-string,
+ :img-string,
+ :price-float,
+ :company-string,
+ :collection-string,
+ :info-string,
+ :inCart- boolean,
+ :count-integer,
+ :total-integer
+
+ProductOrder
+belongs_to :product
+belongs_to :order
