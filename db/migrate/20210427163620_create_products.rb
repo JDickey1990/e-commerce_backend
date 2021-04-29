@@ -2,7 +2,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
   def change
     create_table :products do |t|
       t.string :model
-      t.string :image
+      t.string :img
       t.float :price
       t.string :company
       t.string :collection

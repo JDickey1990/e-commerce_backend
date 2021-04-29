@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
-    has_many :product_orders
-    has_many :orders, through: :product_orders, dependent: :destroy
+    has_many :orders_product
+    has_many :orders, through: :orders_product, dependent: :destroy
+
+    accepts_nested_attributes_for :orders
 end

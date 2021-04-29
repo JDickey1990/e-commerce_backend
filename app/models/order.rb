@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
-    belongs_to :user
-    has_many :product_orders
-    has_many :products, through: :product_orders, dependent: :destroy
+    has_many :orders_product
+    has_many :products, through: :orders_product, dependent: :destroy
 
+    accepts_nested_attributes_for :products
+   
 end

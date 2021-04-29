@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2021_04_27_165733) do
 
   create_table "products", force: :cascade do |t|
     t.string "model"
-    t.string "image"
+    t.string "img"
     t.float "price"
     t.string "company"
     t.string "collection"
@@ -39,13 +39,6 @@ ActiveRecord::Schema.define(version: 2021_04_27_165733) do
     t.boolean "inCart"
     t.integer "count"
     t.float "total"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "username"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
